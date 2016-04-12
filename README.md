@@ -2,6 +2,8 @@
 clickBubble is a simple jquery plugin.
 Clicking on the target area, an animated bubble-liked circle will appear and fade soon.
 
+![](images/sample.gif)
+
 ##Usage
 include jQuery and the plugin on the page
 
