@@ -9,7 +9,7 @@ include jQuery and the plugin on the page
 
 ```html
 <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
-<script type="text/javascript" src="js/jquery.clickBubble.js"></script>
+<script type="text/javascript" src="js/jquery.clickBubble.min.js"></script>
 ```
 
 use clickBubble funciton on the target area
