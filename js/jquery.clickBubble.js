@@ -13,7 +13,7 @@
 			color: '#000',
 			size: 20,
 			time: 500,
-			borderWidth: '2px'
+			borderWidth: 2
 		}
 
 		var id = 0;
@@ -28,7 +28,7 @@
 				.css({
 					'width': 0,
 					'height': 0,
-					'border': defaultOptions.borderWidth + ' solid ' + options.color,
+					'border': defaultOptions.borderWidth + 'px solid ' + options.color,
 					'position': 'absolute',
 					'left': x,
 					'top': y,
