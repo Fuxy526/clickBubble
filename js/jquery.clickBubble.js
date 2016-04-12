@@ -1,3 +1,10 @@
+/**
+* jquery.clickBubble
+*
+* @Version 1.0.0
+* @Author Fuxy526
+*/
+
 (function($) {
 
 	$.fn.clickBubble = function(options) {
@@ -16,23 +23,27 @@
 		$(this).on("mousedown", function(e) {
 			var x = e.clientX;
 			var y = $(window).scrollTop() + e.clientY;
-			$('<div>').attr('id', 'clickCircle_' + id++).css({
-				'width': 0,
-				'height': 0,
-				'border': defaultOptions.borderWidth + ' solid ' + options.color,
-				'position': 'absolute',
-				'left': x,
-				'top': y,
-				'border-radius': '50%'
-			}).animate({
-				'width': defaultOptions.size + 'px',
-				'height': defaultOptions.size + 'px',
-				'left': x - 0.5 * defaultOptions.size,
-				'top': y - 0.5 * defaultOptions.size,
-				opacity: 0
-			}, defaultOptions.time, function() {
-				$(this).remove();
-			}).appendTo('body');
+			$('<div>')
+				.attr('id', 'clickBubble_' + id++)
+				.css({
+					'width': 0,
+					'height': 0,
+					'border': defaultOptions.borderWidth + ' solid ' + options.color,
+					'position': 'absolute',
+					'left': x,
+					'top': y,
+					'border-radius': '50%'
+				})
+				.animate({
+					'width': defaultOptions.size + 'px',
+					'height': defaultOptions.size + 'px',
+					'left': x - 0.5 * defaultOptions.size,
+					'top': y - 0.5 * defaultOptions.size,
+					opacity: 0
+				}, defaultOptions.time, function() {
+					$(this).remove();
+				})
+				.appendTo('body');
 		});
 
 		return this;
