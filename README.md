@@ -34,6 +34,6 @@ use clickBubble funciton on the target area
 		size: 40,
 		time: 1000,
 		borderWidth: 3
-	})
+	});
 </script>
 ```
