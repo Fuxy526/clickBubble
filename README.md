@@ -42,3 +42,7 @@ plugin activation with options
 	});
 </script>
 ```
+
+##License
+
+This plugin is licensed under [MIT](LICENSE)
