@@ -1,26 +1,27 @@
 /**
-* jquery.clickBubble
-*
-* @Version 1.0.0
-* @Author Fuxy526
-*/
+ *  @ Plugin Name: jquery-clickBubble
+ *  @ Plugin URL: https://github.com/Fuxy526/clickBubble
+ *  @ Version: 1.0.0
+ *  @ Author: Fuxy526
+ *  @ Author URL: https://github.com/Fuxy526
+ *  @ License: Licensed under MIT
+ */
 
-(function($) {
+(function( $ ) {
+	'use strict';
 
-	$.fn.clickBubble = function(options) {
+	$.fn.clickBubble = function(opt) {
 
-		var defaultOptions = {
+		var options = $.extend({
 			color: '#000',
 			size: 20,
 			time: 500,
 			borderWidth: 2
-		}
+		}, opt);
 
 		var id = 0;
 
-		options = $.extend(defaultOptions, options);
-
-		$(this).on("mousedown", function(e) {
+		$(this).on('mousedown', function(e) {
 			var x = e.clientX;
 			var y = $(window).scrollTop() + e.clientY;
 			$('<div>')
@@ -28,19 +29,19 @@
 				.css({
 					'width': 0,
 					'height': 0,
-					'border': defaultOptions.borderWidth + 'px solid ' + options.color,
+					'border': options.borderWidth + 'px solid ' + options.color,
 					'position': 'absolute',
 					'left': x,
 					'top': y,
 					'border-radius': '50%'
 				})
 				.animate({
-					'width': defaultOptions.size + 'px',
-					'height': defaultOptions.size + 'px',
-					'left': x - 0.5 * defaultOptions.size,
-					'top': y - 0.5 * defaultOptions.size,
+					'width': options.size + 'px',
+					'height': options.size + 'px',
+					'left': x - 0.5 * options.size,
+					'top': y - 0.5 * options.size,
 					opacity: 0
-				}, defaultOptions.time, function() {
+				}, options.time, function() {
 					$(this).remove();
 				})
 				.appendTo('body');
@@ -50,4 +51,4 @@
 
 	}
 
-})(jQuery);
+}( jQuery ));
