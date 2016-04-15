@@ -1,5 +1,6 @@
 ##clickBubble
 clickBubble is a simple jquery plugin.
+
 Clicking on the target area, an animated bubble-liked circle will appear and fade soon.
 
 ![](images/sample.gif)
@@ -20,12 +21,15 @@ use clickBubble funciton on the target area
 </script>
 ```
 
-4 options can be costumized:
+##Options
 
-* color: code or color name, '#ff0000' or 'red'
-* size: size of bubbles
-* time: bubble fade time
-* borderWidth: width of bubble border
+| Option | Value | Desciption |
+| color | String | bubbles' color, you can use either color code or color name, '#ff0000' or 'red'. `default: '#000'` |
+| size | Interger (px) | bubbles' width and height. `default: 20` |
+| time | Interger (ms) | bubbles' fade time. `default: 500` |
+| borderWidth | Interger (px) | bubbles' border width. `default: 2` |
+
+plugin activation with options
 
 ```html
 <script>
