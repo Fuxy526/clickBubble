@@ -19,7 +19,7 @@ gulp.task('compress', function() {
 gulp.task('watch', function() {
 	var watcher = gulp.watch('js/jquery.clickBubble.js', ['compress']);
 	watcher.on('change', function(event) {
-		console.log('File ' + event.path.yellow + ' was ' + event.type + ', running tasks...');
+		console.log('[JS]'.green + ' File ' + event.path.yellow + ' was ' + event.type + ', running tasks...');
 	});
 });
 
