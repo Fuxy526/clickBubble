@@ -23,8 +23,8 @@ use clickBubble funciton on the target area
 
 ##Options
 
-| Option        | Value           | Desciption  |
-| :------------- |:------------| :-----|
+| Option        | Value         | Desciption  |
+| :------------- |:-------------| :-----|
 | color | String | bubbles' color, you can use either color code or color name, '#ff0000' or 'red'. `default: '#000'` |
 | size | Interger (px) | bubbles' width and height. `default: 20` |
 | time | Interger (ms) | bubbles' fade time. `default: 500` |
